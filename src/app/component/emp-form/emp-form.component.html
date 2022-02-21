@@ -1,0 +1,29 @@
+<form [formGroup]="empForm" class="form__group field" action="">
+    
+    
+<div class="form__group field" >
+
+    <input class="form__field"  name="First_Name" formControlName="First_Name" type="text"   />
+    <label class="form__label" for="First_Name"><b>First name *</b></label><br />
+</div><div class="form__group field" >
+    <input class="form__field"  name="Last_Name" formControlName="Last_Name" type="text"   />
+    <label class="form__label" for="Last_Name"><b>Last name *</b></label><br />
+</div><div class="form__group field" >
+    <input class="form__field"  name="email" type="text" maxlength="100" formControlName="email"  />
+    <label class="form__label" for="Email_Address"><b>Email *</b></label><br />
+</div><div class="form__group field" >
+    <input class="form__field"  name="Portfolio" type="text" formControlName="Portfolio" maxlength="255" value="http://"  />
+    <label class="form__label" for="Portfolio"><b>Portfolio website</b></label><br />
+</div><div class="form__group field" >
+    <input class="form__field"  name="Position" formControlName="Position" type="text" maxlength="100"  />
+    <label class="form__label" for="Position"><b>Position you are applying for *</b></label><br />
+</div><div class="form__group field" >
+    <input class="form__field"  name="Phone" type="text"  formControlName="Phone" />
+    <label class="form__label" for="Phone"><b>Phone *</b></label><br />
+</div><div class="form__group field" >
+<input  (click)="newMessage()" name="skip_submit" type="submit" value="Send Application" />
+<script src="https://www.100forms.com/js/FORMKEY:DB5RZ98GM6S9/SEND:my@email.com" type="text/javascript"></script>
+</div>
+   
+   
+    </form>
