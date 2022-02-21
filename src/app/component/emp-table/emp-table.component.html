@@ -1,0 +1,115 @@
+<div style="border: 1px; background-color: rgb(150, 120, 233); height: 20em;">
+    {{message.First_Name}}
+    {{message.Last_Name}}
+
+    <br>
+
+    Message: {{parent}}
+<app-table-child (messageEvent)="receiveMessage($event)" [childMessage]="message"> </app-table-child>
+</div>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- Position Column -->
+    <ng-container matColumnDef="FirstName">
+      <th mat-header-cell *matHeaderCellDef> First Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.First_Name}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="LastName">
+      <th mat-header-cell *matHeaderCellDef> Last Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Last_Name}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="Email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Position">
+      <th mat-header-cell *matHeaderCellDef> Position </th>
+      <td mat-cell *matCellDef="let element"> {{element.Position}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Phone">
+      <th mat-header-cell *matHeaderCellDef> Phone </th>
+      <td mat-cell *matCellDef="let element"> {{element.Phone}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+  
+
+
+<!-- <div
+      mat-dialog-content
+      fxLayout="column"
+      style="height: 600px!important;"
+      fxFlexAlign="start center"
+    >
+      <div
+        fxLayout="column"
+        fxLayoutAlign="start"
+        fxLayoutGap="10px"
+        style="padding: 20px"
+        fxFlex=""
+      >
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <div
+            fxLayout="column"
+            fxLayoutGap="10px"
+            fxLayoutAlign="center center"
+            fxFlex=""
+          >
+           
+            <div fxLayout="column" fxLayoutAlign="start center">
+              <h3>{{ message.First_Name }} </h3>
+              
+            </div>
+           
+          </div>
+        </div>
+        <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="start">
+          <div
+            fxLayout="column"
+            fxLayoutGap="5px"
+            fxLayoutAlign="start start"
+            
+          >
+            <p class="theme-color margin-top-bottom">Phone number</p>
+            <p class="margin-top-bottom p-large">{{ message.Phone }}</p>
+          </div>
+          <div
+            fxLayout="column"
+            fxLayoutGap="5px"
+            fxLayoutAlign="start start"
+            
+          >
+            <p class="theme-color margin-top-bottom">Email Address</p>
+            <p class="margin-top-bottom p-large">{{ message.email }}</p>
+          </div>
+          <div
+            fxLayout="column"
+            fxLayoutGap="5px"
+            fxLayoutAlign="start start"
+            
+          >
+            <p class="theme-color margin-top-bottom">Portfolio website</p>
+            <p class="margin-top-bottom p-large">{{ message.Portfolio }}</p>
+          </div>
+          
+          
+         
+          
+        </div>
+      </div>
+    </div> -->
+   
