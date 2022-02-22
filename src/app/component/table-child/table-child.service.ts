@@ -9,7 +9,10 @@ export class TableChildService {
 
   constructor( private httpClient : HttpClient) { }
 
-  getData1(): Observable<any>{
-    return this.httpClient.get('http://universities.hipolabs.com/search') as Observable<any>;
+  getData1(){
+    return this.httpClient.get('https://api.publicapis.org/entries') ;
+  }
+  getData2(country: any){
+    return this.httpClient.get('http://universities.hipolabs.com/search?country='+country);
   }
 }
